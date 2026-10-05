@@ -1,0 +1,27 @@
+{
+    "name": "Revolen/rvn-compare-products-for-woocommerce",
+    "description": "My WordPress plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "php-stubs/wordpress-stubs": "^1.0",
+        "squizlabs/php_codesniffer": "^3.10",
+        "wp-coding-standards/wpcs": "^3.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "stan": "phpstan analyse --memory-limit=6G",
+        "cs": "phpcs",
+        "cs:fix": "phpcbf",
+        "check": ["@stan", "@cs"]
+    }
+}

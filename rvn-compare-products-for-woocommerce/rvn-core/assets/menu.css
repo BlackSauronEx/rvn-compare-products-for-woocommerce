@@ -1,0 +1,14 @@
+/*
+ * Значок «R» пункта меню RVN.
+ *
+ * Это текстовый символ, а не картинка: цвет наследуется от цветовой схемы
+ * консоли и меняется при наведении так же, как у стандартных значков.
+ */
+#adminmenu #toplevel_page_rvn div.wp-menu-image::before {
+	content: "R";
+	content: "R" / "";
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 1;
+}

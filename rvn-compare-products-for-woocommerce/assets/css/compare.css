@@ -1,0 +1,328 @@
+/*
+ * RVN Compare — стили кнопок, счётчиков и уведомлений.
+ *
+ * Базовые значения рассчитаны на светлые темы, но ничего не ломают в тёмных:
+ * цвета заданы переменными, а акцент приходит из настроек плагина.
+ * Безопасные зоны экрана учитываются, чтобы кнопки не уходили под системную
+ * полоску iPhone и под нижнее меню мобильных тем.
+ */
+
+:root {
+	--rvn-accent: #2563eb;
+	--rvn-accent-hover: #1d4ed8;
+	--rvn-accent-soft: #eef4ff;
+	--rvn-animate: 300ms;
+	--rvn-offset-top: 0px;
+	--rvn-offset-bottom: 0px;
+	--rvn-safe-bottom: env(safe-area-inset-bottom, 0px);
+	--rvn-safe-top: env(safe-area-inset-top, 0px);
+	--rvn-radius: 10px;
+	--rvn-text: #1f2937;
+	--rvn-border: #e2e8f0;
+}
+
+/* ------------------------------------------------------------------ кнопка */
+
+.rvn-compare-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	min-height: 40px;
+	padding: 8px 14px;
+	border: 1px solid var(--rvn-border);
+	border-radius: var(--rvn-radius);
+	background: #fff;
+	color: var(--rvn-text);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.2;
+	text-decoration: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: background var(--rvn-animate) ease, color var(--rvn-animate) ease, border-color var(--rvn-animate) ease;
+}
+
+.rvn-compare-button .rvn-button-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+}
+
+.rvn-compare-button svg {
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+
+.rvn-compare-button .rvn-icon-in-list,
+.rvn-compare-button .rvn-text-in-list {
+	display: none;
+}
+
+.rvn-compare-button.is-active {
+	border-color: var(--rvn-accent);
+	background: var(--rvn-accent-soft);
+	color: var(--rvn-accent);
+}
+
+.rvn-compare-button.is-active .rvn-icon-in-list,
+.rvn-compare-button.is-active .rvn-text-in-list {
+	display: inline-flex;
+}
+
+.rvn-compare-button.is-active .rvn-icon-compare,
+.rvn-compare-button.is-active .rvn-text-compare {
+	display: none;
+}
+
+/* Наведение — только там, где есть мышь: на тач-экранах эффект «залипает». */
+@media (hover: hover) and (pointer: fine) {
+	.rvn-compare-button:hover {
+		border-color: #cbd5e1;
+		background: #f8fafc;
+		color: var(--rvn-accent);
+	}
+}
+
+.rvn-compare-button:focus-visible {
+	outline: 2px solid var(--rvn-accent);
+	outline-offset: 2px;
+}
+
+.rvn-compare-button:active {
+	transform: translateY(1px);
+}
+
+/* Режимы отображения.
+   Правила стоят после правил состояния и заданы с тем же приоритетом, чтобы
+   режим побеждал состояние: в режиме «только значок» текст скрыт и в активном
+   состоянии, иначе у кнопки «Уже в сравнении» появлялся лишний текст. */
+.rvn-compare-button.rvn-mode-text .rvn-button-icon,
+.rvn-compare-button.rvn-mode-text .rvn-icon-compare,
+.rvn-compare-button.rvn-mode-text .rvn-icon-in-list { display: none; }
+
+.rvn-compare-button.rvn-mode-icon .rvn-button-text,
+.rvn-compare-button.rvn-mode-icon .rvn-text-compare,
+.rvn-compare-button.rvn-mode-icon .rvn-text-in-list { display: none; }
+
+.rvn-compare-button.rvn-mode-icon { padding: 8px; min-width: 40px; }
+
+.rvn-compare-button.rvn-mode-text_icon { flex-direction: row-reverse; }
+.rvn-compare-button.rvn-mode-icon_text { flex-direction: row; }
+.rvn-compare-button.rvn-mode-text_over_icon { flex-direction: column; gap: 3px; }
+.rvn-compare-button.rvn-mode-icon_over_text { flex-direction: column-reverse; gap: 3px; }
+
+/* Позиция поверх изображения карточки товара. */
+.rvn-compare-overlay {
+	position: absolute;
+	z-index: 3;
+	display: inline-flex;
+}
+
+.rvn-overlay-tl { top: 8px; left: 8px; }
+.rvn-overlay-tr { top: 8px; right: 8px; }
+.rvn-overlay-bl { bottom: 8px; left: 8px; }
+.rvn-overlay-br { bottom: 8px; right: 8px; }
+
+.rvn-compare-overlay .rvn-compare-button {
+	background: rgba(255, 255, 255, .94);
+	box-shadow: 0 4px 14px rgba(15, 23, 42, .12);
+}
+
+/* Слоты вокруг кнопки «Купить» и заголовка карточки. */
+.rvn-compare-slot {
+	display: block;
+	margin: 6px 0;
+}
+
+/* -------------------------------------------------------------- счётчики */
+
+.rvn-compare-counter-button,
+.rvn-compare-counter {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: inherit;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.rvn-compare-counter-button svg {
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+
+.rvn-compare-counter-button .rvn-counter,
+.rvn-compare-counter .rvn-counter-value {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 20px;
+	height: 20px;
+	padding: 0 6px;
+	border-radius: 999px;
+	background: var(--rvn-accent);
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+/* Пустой список: счётчик не мозолит глаза нулём. */
+.rvn-is-empty .rvn-compare-counter-button .rvn-counter,
+.rvn-is-empty .rvn-compare-counter .rvn-counter-value {
+	display: none;
+}
+
+.rvn-compare-clear {
+	display: inline-flex;
+	align-items: center;
+	align-self: center;
+	margin: 11px 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--rvn-accent);
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.rvn-compare-clear:hover {
+	text-decoration: underline;
+}
+
+.rvn-compare-progress {
+	display: inline-block;
+	margin: 0 8px;
+	color: #64748b;
+	font-size: 13px;
+	font-variant-numeric: tabular-nums;
+}
+
+/* ----------------------------------------------------------- уведомления */
+
+.rvn-toasts {
+	position: fixed;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	max-width: min(92vw, 360px);
+	pointer-events: none;
+}
+
+.rvn-toasts[data-position="top_left"] { top: calc(var(--rvn-offset-top) + var(--rvn-safe-top) + 12px); left: 12px; align-items: flex-start; }
+.rvn-toasts[data-position="top_center"] { top: calc(var(--rvn-offset-top) + var(--rvn-safe-top) + 12px); left: 50%; transform: translateX(-50%); align-items: center; }
+.rvn-toasts[data-position="top_right"] { top: calc(var(--rvn-offset-top) + var(--rvn-safe-top) + 12px); right: 12px; align-items: flex-end; }
+.rvn-toasts[data-position="bottom_left"] { bottom: calc(var(--rvn-offset-bottom) + var(--rvn-safe-bottom) + 12px); left: 12px; align-items: flex-start; }
+.rvn-toasts[data-position="bottom_center"] { bottom: calc(var(--rvn-offset-bottom) + var(--rvn-safe-bottom) + 12px); left: 50%; transform: translateX(-50%); align-items: center; }
+.rvn-toasts[data-position="bottom_right"] { bottom: calc(var(--rvn-offset-bottom) + var(--rvn-safe-bottom) + 12px); right: 12px; align-items: flex-end; }
+.rvn-toasts[data-position="center"] { top: 50%; left: 50%; transform: translate(-50%, -50%); align-items: center; }
+
+.rvn-toast {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	max-width: 100%;
+	padding: 11px 14px 12px;
+	border-radius: 12px;
+	background: #1f2937;
+	color: #f8fafc;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, .22);
+	font-size: 14px;
+	line-height: 1.4;
+	pointer-events: auto;
+	animation: rvn-toast-in 180ms ease-out;
+}
+
+.rvn-toast.is-leaving {
+	opacity: 0;
+	transform: translateY(6px);
+	transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.rvn-toast-text {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.rvn-toast-undo,
+.rvn-toast-close {
+	flex: 0 0 auto;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: #93c5fd;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.rvn-toast-close {
+	width: 22px;
+	height: 22px;
+	color: #cbd5e1;
+	font-size: 17px;
+	line-height: 1;
+}
+
+.rvn-toast-undo:hover,
+.rvn-toast-close:hover {
+	color: #fff;
+}
+
+/* Полоска обратного отсчёта: показывает, когда уведомление исчезнет. */
+.rvn-toast-bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: var(--rvn-accent);
+	transform-origin: left center;
+	animation-name: rvn-toast-countdown;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rvn-toast-in {
+	from { opacity: 0; transform: translateY(8px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.rvn-toast.is-paused .rvn-toast-bar {
+	animation-play-state: paused;
+}
+
+@keyframes rvn-toast-countdown {
+	from { transform: scaleX(1); }
+	to { transform: scaleX(0); }
+}
+
+@media (max-width: 767px) {
+	.rvn-toasts {
+		max-width: calc(100vw - 24px);
+	}
+
+	.rvn-toast {
+		font-size: 13px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.rvn-compare-button,
+	.rvn-toast,
+	.rvn-toast-bar {
+		animation: none !important;
+		transition: none !important;
+	}
+}

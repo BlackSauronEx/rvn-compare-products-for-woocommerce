@@ -1,0 +1,793 @@
+# Copyright (C) 2026 Revolen
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: RVN Compare Products for WooCommerce 0.4.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rvn-compare-products-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-25T01:51:02+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: rvn-compare-products-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: rvn-compare-products-for-woocommerce.php
+msgid "RVN Compare Products for WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+#: rvn-compare-products-for-woocommerce.php
+msgid "Product comparison for WooCommerce: compare buttons, a live counter and a clean side-by-side comparison table."
+msgstr ""
+
+#. Author of the plugin
+#: rvn-compare-products-for-woocommerce.php
+msgid "Revolen"
+msgstr ""
+
+#: includes/admin/class-admin.php:64
+#: includes/admin/class-settings-page.php:35
+msgid "Compare settings"
+msgstr ""
+
+#: includes/admin/class-admin.php:65
+#: includes/frontend/class-button-renderer.php:45
+#: includes/frontend/class-button-renderer.php:134
+msgid "Compare"
+msgstr ""
+
+#: includes/admin/class-admin.php:91
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:48
+#: includes/admin/class-diagnostics-page.php:49
+#: includes/admin/class-diagnostics-page.php:74
+msgid "RVN Diagnostics"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:64
+#: includes/admin/class-settings-page.php:28
+#: rvn-core/class-core.php:156
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:75
+msgid "Read-only information about this site. Copy the report below and send it to the plugin developer. Nothing is sent anywhere automatically."
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:80
+#: includes/admin/class-settings-page.php:91
+msgid "Component"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:81
+#: includes/admin/class-settings-page.php:92
+msgid "Current"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:94
+msgid "Report"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:95
+msgid "Copy this text and paste it into your message."
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:96
+msgid "Diagnostics report"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:112
+#: includes/admin/class-settings-page.php:124
+msgid "Plugin"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:121
+msgid "not active"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:128
+msgid "Memory limit"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:132
+msgid "Theme"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:136
+msgid "Active plugins"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:140
+#: includes/admin/class-settings-page.php:133
+msgid "Order storage"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:142
+#: includes/admin/class-settings-page.php:135
+msgid "High-Performance Order Storage"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:143
+#: includes/admin/class-settings-page.php:136
+msgid "WordPress posts storage (legacy)"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:146
+msgid "Object cache"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:148
+msgid "external"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:149
+msgid "built-in"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:152
+msgid "Page cache"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:156
+msgid "REST endpoint"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:160
+msgid "Comparison settings"
+msgstr ""
+
+#. translators: 1: Total products limit. 2: Per category limit. 3: Comparison rule.
+#: includes/admin/class-diagnostics-page.php:163
+#, php-format
+msgid "%1$d in total, %2$d per category, rule: %3$s"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:170
+msgid "Your comparison list"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:186
+msgid "empty"
+msgstr ""
+
+#. translators: %d: Number of products in the list.
+#: includes/admin/class-diagnostics-page.php:191
+#, php-format
+msgid "%d products"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:212
+msgid "none"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:224
+msgid "unlimited"
+msgstr ""
+
+#. translators: 1: Human-readable size. 2: Raw value from php.ini.
+#: includes/admin/class-diagnostics-page.php:232
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:264
+msgid "advanced-cache.php enabled"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:264
+msgid "disabled"
+msgstr ""
+
+#: includes/admin/class-diagnostics-page.php:265
+msgid "no caching plugin"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:45
+#: includes/frontend/class-comparison-page.php:161
+msgid "Comparison page"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:46
+msgid "The comparison table is displayed on the selected page. A page created by the plugin starts with the table shortcode. Your other pages are never overwritten automatically."
+msgstr ""
+
+#: includes/admin/class-page-settings.php:49
+msgid "Current page:"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:51
+msgid "No published comparison page is selected. Create one or choose an existing page."
+msgstr ""
+
+#: includes/admin/class-page-settings.php:57
+msgid "Page used for comparison"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:59
+msgid "Select a page"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:64
+msgid "Choosing an existing page does not change its content. Enable automatic insertion below if it has no table shortcode."
+msgstr ""
+
+#: includes/admin/class-page-settings.php:65
+msgid "Save page"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:71
+msgid "Create comparison page"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:77
+msgid "Automatically append the table if the selected page has no table shortcode"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:78
+msgid "This does not edit the page in the database and never creates a duplicate when the shortcode is present."
+msgstr ""
+
+#: includes/admin/class-page-settings.php:79
+msgid "Keep the personal comparison page out of search engine results"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:80
+msgid "Save options"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:84
+msgid "Reset page content"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:85
+msgid "This removes the selected page content and leaves only the table shortcode. A copy of the old content is saved for restoration."
+msgstr ""
+
+#: includes/admin/class-page-settings.php:86
+msgid "Replace the page content with the comparison table?"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:89
+msgid "Reset page to table"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:97
+msgid "Restore content saved before reset"
+msgstr ""
+
+#: includes/admin/class-page-settings.php:110
+#: includes/admin/class-table-settings.php:191
+msgid "You are not allowed to change comparison settings."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:41
+msgid "Compare settings sections"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:54
+msgid "Page"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:67
+#: includes/admin/class-table-settings.php:40
+msgid "Comparison fields"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:80
+#: includes/admin/class-settings-page.php:87
+msgid "System status"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:93
+msgid "Required"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:94
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:127
+#: includes/admin/class-settings-page.php:162
+msgid "OK"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:137
+msgid "Not required"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:138
+msgid "Compatible"
+msgstr ""
+
+#. translators: %s: Minimum version number.
+#: includes/admin/class-settings-page.php:158
+#, php-format
+msgid "%s or newer"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:163
+msgid "Update required"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:41
+msgid "Enable fields, edit their names and hints, assign groups and change their order. Newly discovered WooCommerce attributes appear at the bottom."
+msgstr ""
+
+#: includes/admin/class-table-settings.php:45
+msgid "Field groups"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:46
+msgid "Groups become section headings in the comparison table. Enter a custom name or leave it blank to use the current site language."
+msgstr ""
+
+#: includes/admin/class-table-settings.php:56
+#: includes/admin/class-table-settings.php:64
+msgid "Show"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:57
+msgid "Collapsed initially"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:61
+msgid "Fields"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:63
+#: includes/admin/class-table-settings.php:75
+msgid "Order"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:65
+msgid "Name and technical key"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:66
+msgid "Hint (optional)"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:67
+#: includes/admin/class-table-settings.php:79
+#: includes/class-category-model.php:212
+#: includes/class-category-model.php:216
+#: includes/class-table-fields.php:393
+msgid "Group"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:77
+msgid "Custom field name"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:78
+msgid "Field hint"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:78
+msgid "Hint text (optional)"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:89
+msgid "Table behavior"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:90
+msgid "Enable newly created WooCommerce attributes automatically"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:91
+msgid "Hide attributes not assigned to any product in the active category"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:92
+msgid "Hide rows whose values are all empty"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:93
+msgid "Highlight rows with different values"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:94
+msgid "Show the Only differences switch to customers"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:95
+msgid "Show descriptions of global attribute values in tooltips"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:96
+msgid "Normalize whitespace and case when finding differences"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:97
+msgid "Normalization affects highlighting, not displayed values. Turn it off if it hides an important distinction between products."
+msgstr ""
+
+#: includes/admin/class-table-settings.php:98
+msgid "Difference highlight color"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:99
+msgid "Save table settings"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:102
+msgid "Add a product meta field"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:103
+msgid "Only add public scalar text, number or yes/no fields. Meta fields added here become visible to every customer. Private keys (starting with an underscore) and sensitive names are refused."
+msgstr ""
+
+#: includes/admin/class-table-settings.php:107
+msgid "Meta key"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:108
+msgid "Display name"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:108
+msgid "Battery capacity"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:109
+msgid "Type"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:109
+msgid "Text"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:109
+msgid "Number"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:109
+msgid "Yes / No"
+msgstr ""
+
+#: includes/admin/class-table-settings.php:110
+msgid "Add field"
+msgstr ""
+
+#: includes/class-category-model.php:198
+msgid "Other"
+msgstr ""
+
+#: includes/class-category-model.php:202
+msgid "All products"
+msgstr ""
+
+#. translators: %d: Product category ID.
+#: includes/class-category-model.php:225
+#, php-format
+msgid "Category %d"
+msgstr ""
+
+#. translators: 1: Category or group name. 2: Number of products in it. 3: Limit of products in a category.
+#: includes/class-compare-service.php:316
+#: includes/frontend/class-toasts.php:34
+#, php-format
+msgid "Category \"%1$s\" already has %2$d of %3$d products. Remove one to add another."
+msgstr ""
+
+#. translators: 1: Number of products in the comparison list. 2: Total limit of products.
+#: includes/class-compare-service.php:325
+#: includes/frontend/class-toasts.php:32
+#, php-format
+msgid "Comparison list is full: %1$d of %2$d products."
+msgstr ""
+
+#. translators: %s: Plugin name.
+#: includes/class-requirements.php:92
+#, php-format
+msgid "%s is inactive until the following requirements are met:"
+msgstr ""
+
+#. translators: 1: Required WordPress version. 2: Current WordPress version.
+#: includes/class-requirements.php:133
+#, php-format
+msgid "WordPress %1$s or newer is required. Current version: %2$s."
+msgstr ""
+
+#. translators: 1: Required WooCommerce version. 2: Current WooCommerce version.
+#: includes/class-requirements.php:142
+#, php-format
+msgid "WooCommerce %1$s or newer is required. Current version: %2$s."
+msgstr ""
+
+#. translators: %s: Required WooCommerce version.
+#: includes/class-requirements.php:150
+#, php-format
+msgid "WooCommerce %s or newer must be installed and active."
+msgstr ""
+
+#: includes/class-requirements.php:177
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: includes/class-requirements.php:182
+msgid "Install WooCommerce"
+msgstr ""
+
+#: includes/class-requirements.php:192
+msgid "Go to updates"
+msgstr ""
+
+#: includes/class-table-data.php:145
+msgid "Buy"
+msgstr ""
+
+#: includes/class-table-data.php:148
+msgid "Choose an option"
+msgstr ""
+
+#: includes/class-table-data.php:151
+msgid "View product"
+msgstr ""
+
+#: includes/class-table-data.php:153
+msgid "Unavailable"
+msgstr ""
+
+#: includes/class-table-data.php:208
+msgid "Yes"
+msgstr ""
+
+#: includes/class-table-data.php:208
+msgid "No"
+msgstr ""
+
+#: includes/class-table-data.php:250
+msgid "In stock"
+msgstr ""
+
+#: includes/class-table-data.php:250
+msgid "Out of stock"
+msgstr ""
+
+#. translators: 1: Average rating. 2: Rating count.
+#: includes/class-table-data.php:256
+#, php-format
+msgid "%1$s of 5 (%2$d reviews)"
+msgstr ""
+
+#: includes/class-table-fields.php:74
+msgid "Price"
+msgstr ""
+
+#: includes/class-table-fields.php:79
+msgid "SKU"
+msgstr ""
+
+#: includes/class-table-fields.php:84
+msgid "Availability"
+msgstr ""
+
+#: includes/class-table-fields.php:89
+msgid "Rating"
+msgstr ""
+
+#: includes/class-table-fields.php:94
+msgid "Brand"
+msgstr ""
+
+#: includes/class-table-fields.php:99
+msgid "Weight"
+msgstr ""
+
+#: includes/class-table-fields.php:104
+msgid "Dimensions"
+msgstr ""
+
+#: includes/class-table-fields.php:109
+msgid "Short description"
+msgstr ""
+
+#: includes/class-table-fields.php:114
+msgid "Description"
+msgstr ""
+
+#: includes/class-table-fields.php:387
+msgid "Main features"
+msgstr ""
+
+#: includes/class-table-fields.php:389
+msgid "Weight and dimensions"
+msgstr ""
+
+#: includes/class-table-fields.php:391
+msgid "Specifications"
+msgstr ""
+
+#. translators: %s: Name of the active category.
+#: includes/frontend/class-assets.php:164
+#, php-format
+msgid "Clear %s"
+msgstr ""
+
+#: includes/frontend/class-assets.php:165
+msgid "products in this category"
+msgstr ""
+
+#: includes/frontend/class-assets.php:166
+msgid "The selected products have no differing values in the visible rows."
+msgstr ""
+
+#: includes/frontend/class-assets.php:167
+msgid "Select a comparison category"
+msgstr ""
+
+#: includes/frontend/class-assets.php:168
+msgid "Could not load products. Please try again."
+msgstr ""
+
+#: includes/frontend/class-assets.php:169
+#: includes/frontend/class-toasts.php:41
+msgid "Remove all products from comparison?"
+msgstr ""
+
+#: includes/frontend/class-assets.php:170
+#: includes/frontend/class-toasts.php:42
+msgid "Remove all products from this category?"
+msgstr ""
+
+#: includes/frontend/class-assets.php:171
+msgid "Remove from comparison"
+msgstr ""
+
+#: includes/frontend/class-assets.php:172
+msgid "More information"
+msgstr ""
+
+#: includes/frontend/class-button-renderer.php:57
+msgid "In comparison"
+msgstr ""
+
+#: includes/frontend/class-button-renderer.php:198
+#: includes/frontend/class-table-view.php:43
+msgid "Clear all"
+msgstr ""
+
+#. translators: 1: Number of products in the current tab. 2: Limit of products per category.
+#: includes/frontend/class-button-renderer.php:235
+#: includes/frontend/class-button-renderer.php:243
+#, php-format
+msgid "%1$d of %2$d"
+msgstr ""
+
+#: includes/frontend/class-comparison-page.php:149
+#: includes/frontend/class-table-view.php:33
+msgid "Product comparison"
+msgstr ""
+
+#: includes/frontend/class-comparison-page.php:316
+msgid "You are not allowed to change the comparison page."
+msgstr ""
+
+#. translators: 1: Shortcode name. 2: Missing argument name.
+#: includes/frontend/class-frontend.php:44
+#, php-format
+msgid "RVN Compare: shortcode %1$s outside a product loop needs the \"%2$s\" argument."
+msgstr ""
+
+#: includes/frontend/class-table-view.php:31
+msgid "Compare products"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:32
+msgid "YOUR SHORTLIST"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:34
+msgid "Find what sets your products apart."
+msgstr ""
+
+#: includes/frontend/class-table-view.php:36
+msgid "Loading your comparison…"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:37
+msgid "Nothing to compare yet"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:38
+msgid "Choose products in the shop and they will appear here."
+msgstr ""
+
+#: includes/frontend/class-table-view.php:39
+msgid "Explore the shop"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:41
+msgid "Comparison categories"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:42
+msgid "Only differences"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:45
+msgid "Previous product"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:45
+msgid "Next product"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:46
+msgid "Compared products"
+msgstr ""
+
+#: includes/frontend/class-table-view.php:49
+msgid "Enable JavaScript to view your comparison list."
+msgstr ""
+
+#: includes/frontend/class-toasts.php:28
+msgid "Product added to the comparison list"
+msgstr ""
+
+#: includes/frontend/class-toasts.php:29
+msgid "Product removed from the comparison list"
+msgstr ""
+
+#: includes/frontend/class-toasts.php:30
+msgid "Comparison list cleared"
+msgstr ""
+
+#. translators: %d: Number of products added when merging the guest list with the account list.
+#: includes/frontend/class-toasts.php:36
+#, php-format
+msgid "Comparison list merged: %d products added"
+msgstr ""
+
+#: includes/frontend/class-toasts.php:37
+msgid "Undo"
+msgstr ""
+
+#: includes/frontend/class-toasts.php:38
+msgid "Close notification"
+msgstr ""
+
+#: includes/frontend/class-toasts.php:39
+msgid "This product is no longer available"
+msgstr ""
+
+#: includes/frontend/class-toasts.php:40
+msgid "Could not update your comparison list. Please try again."
+msgstr ""
+
+#: includes/frontend/class-toasts.php:43
+msgid "Your comparison list is empty"
+msgstr ""
+
+#: includes/rest/class-rest-controller.php:206
+msgid "Invalid security token. Reload the page and try again."
+msgstr ""
+
+#: includes/rest/class-rest-controller.php:316
+msgid "Too many requests. Try again in a minute."
+msgstr ""
+
+#. translators: 1: Plugin name. 2: Required PHP version. 3: Current PHP version.
+#: rvn-compare-products-for-woocommerce.php:93
+#, php-format
+msgid "%1$s requires PHP %2$s or newer. Your server runs PHP %3$s. Please ask your hosting provider to update PHP."
+msgstr ""
+
+#: rvn-core/class-core.php:123
+#: rvn-core/class-core.php:124
+#: rvn-core/class-core.php:162
+msgid "Support"
+msgstr ""
+
+#: rvn-core/class-core.php:163
+msgid "This section will be available soon."
+msgstr ""
